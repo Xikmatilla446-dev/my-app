@@ -84,8 +84,8 @@ const MainForm = () => {
                     is_mandatory: item.is_mandatory,
                     field_type: item.field_type,
                     field_name: item?.field_name ? item?.field_name : "",
-                    document_id: item?.document_id ? item?.document_id : "",
-                    select_values: item?.select_values ? item?.select_values : ""
+                    document_id: item?.document_id ? item?.document_id : undefined,
+                    select_values: item.select_values ? JSON.parse(item.select_values) : []
                 }
             })
         };
@@ -164,15 +164,12 @@ const MainForm = () => {
                                         name={`form_values.${index}.select_values`}
                                         control={control}
                                         render={({field, fieldState}) => (
-                                            <Select
+                                            <Input
                                                 label={"Field name"}
                                                 size={"large"}
                                                 {...field}
                                                 style={{width: "100%"}}
-                                                options={[
-                                                    {value: 1, label: "Agree"},
-                                                    {value: 0, label: "Disagree"}
-                                                ]}
+
                                             />
                                         )}
                                     />
