@@ -10,10 +10,12 @@ import get from "lodash/get";
 import {useGetDocumentsQuery} from "hooks/queries/general";
 import useApiMutation from "../../hooks/queries/general/useGeneralMutation";
 import {AxiosResponse, AxiosError} from "axios";
+import {useNavigate} from "react-router-dom";
 
 const MainForm = () => {
     const getDocuments = useGetDocumentsQuery();
     const documentsSaveMutation = useApiMutation("/api/v1/documents/create", "post", {});
+    const navigate = useNavigate();
 
     const validationSchema = useMemo(
         () =>
@@ -88,9 +90,9 @@ const MainForm = () => {
             })
         };
         documentsSaveMutation.mutateAsync(payload).then((res: AxiosResponse) => {
-
+            navigate('/');
         }).catch((error: AxiosError) => {
-
+            console.log(error)
         });
     });
 
