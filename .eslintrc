@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "react-app"
+  ],
+  "rules": {
+    "quotes": ["warn", "double"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "semi": ["warn", "always"]
+  }
+}

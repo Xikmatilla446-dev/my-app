@@ -1,0 +1,12 @@
+.input {
+  position: relative;
+  .label {
+    position: absolute;
+    top: -10px;
+    z-index: 1;
+    left: 8px;
+    background: #fff;
+    padding: 0 5px;
+    z-index: 10;
+  }
+}

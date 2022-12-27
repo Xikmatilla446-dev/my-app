@@ -1,0 +1,90 @@
+$spaceamounts: (
+  5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  35,
+  40,
+  45,
+  50,
+  60,
+  70,
+  80,
+  90,
+  100,
+  120,
+  150,
+  160,
+  180,
+  200
+); // pixel amounts.
+$sides: (top, bottom, left, right); // Leave this variable alone
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+$sizes: (
+  10,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  22,
+  24,
+  28,
+  30,
+  32,
+  36,
+  48
+); // font-size amounts.
+@each $size in $sizes {
+  .fz#{$size} {
+    font-size: #{$size}px;
+  }
+}
+
+$spacegaps: (
+  10,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  22,
+  24,
+  28,
+  30,
+  32,
+  36,
+  48
+); // space gaps amounts.
+@each $spacegaps in $spacegaps {
+  .gap#{$spacegaps} {
+    gap: #{$spacegaps}px;
+  }
+}
+
+$fw: (300, 400, 500, 600, 700, 800); // font-weights amounts.
+@each $fw in $fw {
+  .fw#{$fw} {
+    font-weight: #{$fw};
+  }
+}
