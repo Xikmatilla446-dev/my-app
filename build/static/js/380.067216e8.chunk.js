@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[380],{6380:function(e,t,s){s.r(t),s.d(t,{default:function(){return r}});var n=s(6793),u=s(184),r=function(e){return(0,u.jsx)("div",{className:"flex-center h100",children:(0,u.jsx)(n.ZP,{status:"404",title:"404",subTitle:"Sorry, the page you visited does not exist.",extra:null})})}}}]);
+//# sourceMappingURL=380.067216e8.chunk.js.map
