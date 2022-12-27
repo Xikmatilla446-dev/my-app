@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { useRoutes } from "react-router-dom";
 
 const Main = lazy(() => import("../Main"));
+const MainForm = lazy(() => import("../MainForm"));
 const NotFound = lazy(() => import("../NotFound"));
 
 export default function RoutesList() {
@@ -9,6 +10,10 @@ export default function RoutesList() {
     {
       path: "/",
       element: <Main />,
+    },
+    {
+      path: "/main-form",
+      element: <MainForm />,
     },
     {
       path: "*",

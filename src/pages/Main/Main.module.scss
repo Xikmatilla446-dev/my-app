@@ -1,4 +1,31 @@
-.main-page {
+.main_page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
+  .box {
+    width: 70% !important;
+
+    button {
+      background: #325ECD;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    table{
+
+      tbody{
+        td{
+          font-weight: 600;
+        }
+      }
+    }
+  }
 
 }

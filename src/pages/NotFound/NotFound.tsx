@@ -1,11 +1,8 @@
-import { Button, Result } from "antd";
-import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import {  Result } from "antd";
 
 export type Props = {};
 
 const NotFound = (props: Props) => {
-  const navigate = useNavigate();
   return (
     <div className={"flex-center h100"}>
       <Result
