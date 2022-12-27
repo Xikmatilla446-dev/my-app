@@ -5,10 +5,12 @@ import classes from "./Main.module.scss";
 import {useGetDocumentsQuery} from "hooks/queries/general";
 import get from 'lodash/get';
 import dayjs from "dayjs";
+import {useNavigate} from "react-router-dom";
 
 const Main = () => {
 
     const getDocuments = useGetDocumentsQuery();
+    const navigate = useNavigate();
 
 
     const columns = [
@@ -46,7 +48,7 @@ const Main = () => {
         <div className={classes.main_page}>
             <div className={classes.box}>
                 <Row justify={"end"}>
-                    <Button>New document form</Button>
+                    <Button onClick={()=> navigate("/main-form")}>New document form</Button>
                 </Row>
                 <Table
                     loading={getDocuments.isLoading}
